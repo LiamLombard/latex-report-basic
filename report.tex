@@ -1,0 +1,26 @@
+\documentclass[11pt]{article}
+\usepackage{style}
+
+\begin{document}
+
+\pagenumbering{arabic}
+
+\ltitle{Report Name}{Your Name}
+\tableofcontents
+
+\input{./Sections/Introduction.tex}
+\input{./Sections/Nomenclature.tex}
+\input{./Sections/Theory.tex}
+\input{./Sections/Main.tex}
+\input{./Sections/Conclusion.tex}
+\newpage
+\bibliography{./Bib}
+\bibliographystyle{ieeetr}
+\newpage
+\appendix
+\begin{appendices}
+  \input{./Appendices/Main.tex}
+\end{appendices}
+
+
+\end{document}

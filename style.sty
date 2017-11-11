@@ -1,0 +1,109 @@
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{subfig}
+\usepackage{url}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage[titletoc, title]{appendix}
+\usepackage{lipsum}
+\usepackage{courier}
+\usepackage{siunitx}
+\usepackage{tabu}
+\usepackage{float}
+\usepackage{parskip}
+\usepackage{titling}
+\usepackage{array}
+\usepackage{scrextend}
+\usepackage{verbatim}
+\usepackage{gensymb}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks,
+	allcolors=black
+}
+\usepackage[scale=0.75]{geometry}
+\geometry{
+   a4paper,
+   top=15mm,
+   bottom=15mm,
+   left=15mm,
+   right=15mm}
+\textheight=700px
+
+\renewcommand{\url}{\nolinkurl}
+
+\addtokomafont{labelinglabel}{\sffamily}
+
+\setlength\extrarowheight{3pt}
+
+\sisetup{group-digits = integer, group-minimum-digits = 3, group-separator = {,}}
+
+\setlength{\droptitle}{-5em}
+
+\newcommand{\ltitle}[2]{
+\begin{center}{\huge\textbf{#1}}
+\end{center}
+#2\hfill\today\newline
+}
+
+\definecolor{niceblue}{HTML}{008cba}
+
+\newcommand{\lsection}[2][\DefaultOpt]{
+\def\DefaultOpt{#2}
+\section[#1]{#2}
+\vspace{-0.7cm}\textcolor{niceblue}{\rule{\textwidth}{0.2mm}}\\
+}
+\newcommand{\lsubsection}[2][\DefaultOpt]{
+\def\DefaultOpt{#2}
+\subsection[#1]{#2}
+\vspace{-0.7cm}\textcolor{niceblue}{\rule{\textwidth}{0.2mm}}\\
+}
+\newcommand{\lsubsubsection}[2][\DefaultOpt]{
+\def\DefaultOpt{#2}
+\subsubsection[#1]{#2}
+\vspace{-0.7cm}\textcolor{niceblue}{\rule{\textwidth}{0.2mm}}\\
+}
+
+\setlength\parindent{0pt}
+
+\lstset{ %
+  backgroundcolor=\color{white},
+  basicstyle=\footnotesize\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{magenta},
+  extendedchars=true,
+  frame=single,
+  keepspaces=true,
+  keywordstyle=\color{red},
+  language=python,
+  morekeywords={', =},
+  % numbers=left,
+  numberstyle=\tiny\color{Gray},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  upquote=true
+}
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+  \gdef\add@text{#1\gdef\add@text{}}}%
+\renewcommand\tagform@[1]{%
+  \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+
+\setlength{\footskip}{25mm}
+\setlength{\parindent}{0cm}
