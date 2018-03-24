@@ -1,10 +1,11 @@
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{tabularx}
 \usepackage{tabulary}
 \usepackage{graphicx}
 \usepackage[english]{babel}
-\usepackage{subfig}
+%\usepackage{subfig}
 \usepackage{url}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
@@ -22,12 +23,33 @@
 \usepackage{verbatim}
 \usepackage{gensymb}
 \usepackage{longtable}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usetikzlibrary{shapes,arrows}
+\usepackage{url}
+\usepackage[margin=15mm]{geometry}
+\usepackage{rotating}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{longtable}
+\graphicspath{ {Images/} }
+\usepackage[export]{adjustbox}
+\usepackage{pdfpages}
+\usepackage{etoolbox}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
 	colorlinks,
 	allcolors=black
 }
-\usepackage[scale=0.75]{geometry}
+\usepackage{geometry}
 \geometry{
    a4paper,
    top=15mm,
@@ -54,22 +76,10 @@
 
 \definecolor{niceblue}{HTML}{008cba}
 
-\newcommand{\lsection}[2][\DefaultOpt]{
-\def\DefaultOpt{#2}
-\section[#1]{#2}
-\vspace{-0.7cm}\textcolor{niceblue}{\rule{\textwidth}{0.2mm}}\\
-}
-\newcommand{\lsubsection}[2][\DefaultOpt]{
-\def\DefaultOpt{#2}
-\subsection[#1]{#2}
-\vspace{-0.7cm}\textcolor{niceblue}{\rule{\textwidth}{0.2mm}}\\
-}
-\newcommand{\lsubsubsection}[2][\DefaultOpt]{
-\def\DefaultOpt{#2}
-\subsubsection[#1]{#2}
-\vspace{-0.7cm}\textcolor{niceblue}{\rule{\textwidth}{0.2mm}}\\
-}
-
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection}{1em}{\Large\bfseries}[\vspace{-5mm}\textcolor{niceblue}{\rule{\textwidth}{0.3mm}}\\\vspace{-7mm}]
+\titleformat{name=\section,numberless}[hang]{}{}{0pt}{\Large\bfseries}[\vspace{-5mm}\textcolor{niceblue}{\rule{\textwidth}{0.3mm}}\\\vspace{-7mm}]
+\titleformat{name=\subsection}[hang]{\large\bfseries}{\thesubsection}{1em}{\large\bfseries}[\vspace{-5mm}\textcolor{niceblue}{\rule{\textwidth}{0.3mm}}\\\vspace{-7mm}]
+\titleformat{name=\subsubsection}[hang]{\bfseries}{\thesubsubsection}{1em}{\bfseries}[\vspace{-5mm}\textcolor{niceblue}{\rule{\textwidth}{0.3mm}}\\\vspace{-7mm}]
 \setlength\parindent{0pt}
 
 \lstset{ %
